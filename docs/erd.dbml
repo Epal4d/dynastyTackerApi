@@ -1,0 +1,65 @@
+Table User {
+  Id int pk
+  systemType varchar
+  gamerId varchar
+
+}
+Table Team {
+  id int pk
+  name varchar
+  userId int
+  offensivePlaybook varchar
+  defensivePlaybook varchar
+  overall int
+  offensiveRating int
+  defensiveRating int
+}
+Table Player {
+  id int pk
+  teamId int
+  name varchar
+  recruitedPosition varchar
+  recruitingStatus varchar [note: 'recruit | committed | signed']
+  pipeline int
+  // recruit-only fields — null once status moves past recruiting
+  starRating int [null]
+  interestLevel int [null]
+  committedDate date [null]
+}
+Table PlayerNotes {
+  id int pk
+  playerId int 
+  notes varchar
+  createdAt datetime
+  type varchar
+  targetPosition varchar
+  targetYear int
+}
+Table PlayerSeason {
+  id int pk
+  playerId int 
+  seasonId int 
+  classYear varchar [note: 'FR | SO | JR | SR']
+  position varchar
+  nil int 
+  status varchar
+  overall int 
+}
+Table Season {
+  id int pk
+  year int [note: 'dynasty year, e.g. 2027']
+}
+
+
+
+
+
+Ref: "User"."Id" < "Team"."userId"
+
+Ref: "Team"."id" < "Player"."teamId"
+
+Ref: "Player"."id" < "PlayerNotes"."playerId"
+
+Ref: "Player"."id" < "PlayerSeason"."playerId"
+
+Ref: "Season"."id" < "PlayerSeason"."seasonId"

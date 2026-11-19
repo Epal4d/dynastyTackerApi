@@ -1,0 +1,131 @@
+{
+  "version": "4.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "currentViewName": null,
+  "defaultView": {
+    "detailLevel": "All",
+    "relationshipMode": "All",
+    "tablePositions": [
+      {
+        "name": "User",
+        "schemaName": "public",
+        "x": 12,
+        "y": 12
+      },
+      {
+        "name": "Team",
+        "schemaName": "public",
+        "x": 450.73828125,
+        "y": 12
+      },
+      {
+        "name": "Player",
+        "schemaName": "public",
+        "x": 934.671875,
+        "y": 12
+      },
+      {
+        "name": "PlayerNotes",
+        "schemaName": "public",
+        "x": 1436.1572265625,
+        "y": 12
+      },
+      {
+        "name": "PlayerSeason",
+        "schemaName": "public",
+        "x": 1436.1572265625,
+        "y": 314
+      },
+      {
+        "name": "Season",
+        "schemaName": "public",
+        "x": 12,
+        "y": 186
+      }
+    ],
+    "tableGroupCollapseStates": [],
+    "stickyNoteLayouts": [],
+    "referencePaths": [
+      {
+        "firstFieldNames": [
+          "Id"
+        ],
+        "firstTableName": "User",
+        "firstSchemaName": "public",
+        "firstRelation": "1",
+        "secondFieldNames": [
+          "userId"
+        ],
+        "secondTableName": "Team",
+        "secondSchemaName": "public",
+        "secondRelation": "*",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "id"
+        ],
+        "firstTableName": "Team",
+        "firstSchemaName": "public",
+        "firstRelation": "1",
+        "secondFieldNames": [
+          "teamId"
+        ],
+        "secondTableName": "Player",
+        "secondSchemaName": "public",
+        "secondRelation": "*",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "id"
+        ],
+        "firstTableName": "Player",
+        "firstSchemaName": "public",
+        "firstRelation": "1",
+        "secondFieldNames": [
+          "playerId"
+        ],
+        "secondTableName": "PlayerNotes",
+        "secondSchemaName": "public",
+        "secondRelation": "*",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "id"
+        ],
+        "firstTableName": "Player",
+        "firstSchemaName": "public",
+        "firstRelation": "1",
+        "secondFieldNames": [
+          "playerId"
+        ],
+        "secondTableName": "PlayerSeason",
+        "secondSchemaName": "public",
+        "secondRelation": "*",
+        "checkPoints": []
+      },
+      {
+        "firstFieldNames": [
+          "id"
+        ],
+        "firstTableName": "Season",
+        "firstSchemaName": "public",
+        "firstRelation": "1",
+        "secondFieldNames": [
+          "seasonId"
+        ],
+        "secondTableName": "PlayerSeason",
+        "secondSchemaName": "public",
+        "secondRelation": "*",
+        "checkPoints": []
+      }
+    ],
+    "elementPositions": [],
+    "groupCollapseStates": [],
+    "linkPaths": []
+  },
+  "views": {}
+}
