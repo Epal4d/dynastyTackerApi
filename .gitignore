@@ -1,0 +1,15 @@
+# Python virtual environment
+venv/
+
+# Python bytecode cache
+__pycache__/
+*.py[cod]
+
+# SQLite database — regenerable from schema.sql + seed_data.sql
+*.db
+
+# Environment variables / secrets
+.env
+
+# macOS junk
+.DS_Store
